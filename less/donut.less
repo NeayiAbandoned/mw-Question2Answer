@@ -1,0 +1,222 @@
+@import (reference) "bootstrap/bootstrap.less";
+@import (reference) "font-awesome/font-awesome.less";
+@import (reference) "variables.less";
+@import (reference) "utils/backgrounds.less";
+
+
+@import "utils/border.less";
+// @import "components/clears.less";
+// @import "components/inputs.less";
+@import "components/tables.less";
+//@import "components/images.less";
+// @import "components/header.less";
+// @import "components/icons.less";
+@import "components/buttons.less";
+// @import "components/breadcrumb.less";
+// @import "components/footer.less";
+// @import "components/site-header.less";
+// @import "components/searchbar.less";
+// @import "components/back-to-top.less";
+// @import "components/sidebar.less";
+@import "components/votes.less";
+@import "components/tags.less";
+// @import "components/navigation.less";
+// @import "components/responsive-utility.less";
+
+
+/* Answers and views count */
+.qa-a-count {
+  border: 1px solid @alert-success-border;
+  color: @alert-success-text;
+  float: note;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-right: 5px;
+  padding: 0;
+  border-radius: 5px;
+  &-zero {
+    border: 1px solid @alert-danger-border;
+    color: @alert-danger-text;
+  }
+  &-selected {
+    border: 1px solid darken(@alert-success-border , 10%);
+    color: darken(@alert-success-text , 10%);
+  }
+  &-data {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+  }
+  &-pad {
+    font-size: @font-size-small;
+  }
+}
+
+.qa-view-count {
+  float: left;
+  border: 1px solid @table-border-color;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-right: 5px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  &-data {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+  }
+  &-pad {
+    font-size: @font-size-small;
+  }
+}
+
+// paginations
+
+.qa-page-links {
+  clear: both;
+  &-label {
+    display: none;
+  }
+  &-list {
+    .pagination();
+  }
+}
+
+/* Question list */
+.qa-part-q-list {
+  margin-bottom: 20px;
+}
+
+.qa-q-list {
+  margin-bottom: 20px;
+  .qa-vote-buttons {
+    .hidden-xs();
+  }
+  @media @mobile {
+    .qa-voting {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 5px;
+      border-radius: @border-radius-small;
+      &.qa-voting-net {
+        .qa-netvote-count-data {
+          font-size: 14px;
+          line-height: 16px;
+          margin-top: 5px;
+        }
+        .qa-netvote-count-pad {
+          font-size: 8px;
+        }
+      }
+    }
+
+    .qa-a-count {
+      width: 45px;
+      height: 45px;
+      margin: 0;
+      padding: 0;
+      border-radius: @border-radius-small;
+      .qa-a-count-data {
+        font-size: 14px;
+        line-height: 16px;
+        margin-top: 5px;
+      }
+      .qa-a-count-pad {
+        font-size: 8px;
+      }
+    }
+
+    .qa-q-item-main {
+      padding-left: 0;
+      padding-right: 5px;
+    }
+  }
+}
+
+.qa-q-list-item {
+  padding: 10px;
+  .light-border();
+  margin-bottom: -1px;
+
+  &:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  &:last-child {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .qa-q-item-stats {
+    float: right;
+
+    .qa-voting, .qa-a-count {
+
+    }
+  }
+
+}
+
+.qa-q-item-title {
+  color: @gray-base;
+  font-size: 16px;
+  a {
+    font-size: @font-size-h4;
+    font-weight: bold;
+    line-height: @line-height-base;
+  }
+  .qa-q-item-content {
+    font-size: @font-size-base;
+    margin-top: 8px;
+    max-height: 80px;
+    overflow-y: auto;
+    .light-border();
+    padding: 4px;
+  }
+}
+
+.qa-q-item {
+
+  &-stats {
+    float: right;
+    @media @mobile {
+      float: left;
+      padding: 0 5px ;
+    }
+  }
+
+  &-main {
+
+  }
+
+  &-buttons {
+    .clearfix();
+    float: left;
+    margin: 10px 0;
+  }
+
+  &-view-count {
+    color: @gray;
+    .fa:before {
+      color: @gray-light;
+    }
+  }
+}
+
+.qa-suggest-next {
+  background: @light-background;
+  .light-border();
+  box-shadow: 0 10px 15px 0 rgba(255, 255, 255, 1) inset, 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  a {
+    font-weight: bold;
+  }
+}

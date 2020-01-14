@@ -1,0 +1,44 @@
+{
+	"name": "Question2Answer",
+	"author": "Bertrand Gorge - Neayi",
+	"version": "1.0.0",
+	"url": "https://www.mediawiki.org/wiki/Extension:Question2Answer",
+	"descriptionmsg": "question2answer-desc",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"MessagesDirs": {
+		"Question2Answer": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"Question2AnswerHooks": "src/Question2AnswerHooks.php"
+	},
+	"ExtensionMessagesFiles": {
+		"Question2AnswerMagic": "Question2Answer.i18n.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "Question2AnswerHooks::onParserFirstCallInit"
+	},
+
+
+	"ResourceModules": {
+		"ext.Question2Answer.script": {
+			"scripts": "modules/ext.Question2Answer.js",
+			"styles": [
+				"modules/ext.Question2Answer.css"
+			],
+			"messages": [
+				"myextension-foo-label"
+			],
+			"dependencies": [
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "Question2Answer"
+	},
+
+	"manifest_version": 1
+}
