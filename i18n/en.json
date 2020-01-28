@@ -1,3 +1,6 @@
 {
-    "question2answer-desc": "Shows questions from a Question2Answer site."
+    "question2answer-desc": "Shows questions from a Question2Answer site.",
+    "start-by-asking-a-question": "Start by <a>asking a question</a>.",
+    "votes": "{{PLURAL:$1|vote|votes}}",
+    "asked-by": "asked on $3 by $1 ($2 {{PLURAL:$2|point|points}})"
 }

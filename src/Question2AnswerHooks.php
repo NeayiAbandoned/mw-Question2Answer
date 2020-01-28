@@ -25,13 +25,15 @@ class Question2AnswerHooks
 
 		$parser->getOutput()->addModules('ext.Question2Answer.script');
 
+		$calltoaction = str_replace('<a>', '<a href="'.$GLOBALS['wgQuestion2AnswerURL'].'ask?tags='.implode(',', $keywords).'">', wfMessage('start-by-asking-a-question')->plain());
+
 		$output = '<div class="container">
 					<div class="qa-main col-md-9 col-xs-12 pull-left">
 						<div class="qa-part-q-list">
 							<div class="qa-q-list" data-q2aurl="'.$GLOBALS['wgQuestion2AnswerURL'].'" data-searchquery="'.implode(',', $keywords).'"></div>
 						</div>
 						<div class="qa-suggest-next col-xs-12 text-center clearfix alert" style="position: unset">
-							Commencer par <a href="'.$GLOBALS['wgQuestion2AnswerURL'].'ask?tags='.implode(',', $keywords).'">poser une question</a> .
+							'.$calltoaction.'
 						</div>
 					</div>
 					<div class="row">

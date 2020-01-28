@@ -1,3 +1,6 @@
 {
-    "question2answer-desc": "The description of question2answer used in Extension credits."
+    "question2answer-desc": "The description of question2answer used in Extension credits.",
+    "start-by-asking-a-question": "A call-to-action shown at the bottom of the list of questions",
+    "votes": "The vote word that is shown in the vote button",
+    "asked-by": "A description showing some details about each question"
 }

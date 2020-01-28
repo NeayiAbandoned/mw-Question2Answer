@@ -1,0 +1,6 @@
+{
+    "question2answer-desc": "Affiche des questions d'une instance Question2Answer.",
+    "start-by-asking-a-question": "Commencer par <a>poser une question</a>..!",
+    "votes": "{{PLURAL:$1|vote|votes}}",
+    "asked-by": "posée le $3 par $1 ($2 {{PLURAL:$2|point|points}})"
+}
