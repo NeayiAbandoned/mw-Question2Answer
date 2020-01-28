@@ -64,7 +64,7 @@ $.when( mw.loader.using( [ 'mediawiki.api', 'mediawiki.jqueryMsg' ] ), $.ready )
                             '<div class="qa-q-item-title">' +
                             '<a href="'+element.url+'">'+element.title+'</a>' +
                             '</div>' +
-                            '<ul id="qa_ai_images_preview"></ul>' +
+//                            '<ul id="qa_ai_images_preview"></ul>' + // To implement eventually
                             '<span class="qa-q-item-avatar-meta">' +
                             '    <span class="qa-q-item-meta">' + mw.message('asked-by', element.handle, element.points, date) +
                             '    </span>' +
